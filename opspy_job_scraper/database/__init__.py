@@ -1,10 +1,11 @@
 from datetime import datetime
 from urllib.parse import urlparse, parse_qs
 
-from prisma.enums import JobStatus, JobType
 
 from prisma import Prisma
 from jobspy import JobPost
+
+from opspy_job_scraper.prisma.enums import JobType, JobStatus
 
 
 def generate_company_id(company_name: str) -> str:

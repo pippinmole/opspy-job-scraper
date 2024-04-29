@@ -85,10 +85,10 @@ __all__ = (
 
 log: logging.Logger = logging.getLogger(__name__)
 
-SCHEMA_PATH = Path('C:/Users/icond/Documents/Coding/opspy-job-scraper/opspy_job_scraper/schema.prisma')
+SCHEMA_PATH = Path('/Users/jonny/Documents/GitHub/opspy-job-scraper/opspy_job_scraper/schema.prisma')
 PACKAGED_SCHEMA_PATH = Path(__file__).parent.joinpath('schema.prisma')
 ENGINE_TYPE: EngineType = EngineType.binary
-BINARY_PATHS = model_parse(BinaryPaths, {'queryEngine': {'windows': 'C:\\Users\\icond\\.cache\\prisma-python\\binaries\\5.11.0\\efd2449663b3d73d637ea1fd226bafbcf45b3102\\node_modules\\prisma\\query-engine-windows.exe'}, 'introspectionEngine': {}, 'migrationEngine': {}, 'libqueryEngine': {}, 'prismaFmt': {}})
+BINARY_PATHS = model_parse(BinaryPaths, {'queryEngine': {'darwin-arm64': '/Users/jonny/.cache/prisma-python/binaries/5.11.0/efd2449663b3d73d637ea1fd226bafbcf45b3102/node_modules/prisma/query-engine-darwin-arm64'}, 'introspectionEngine': {}, 'migrationEngine': {}, 'libqueryEngine': {}, 'prismaFmt': {}})
 
 
 class Prisma(AsyncBasePrisma):

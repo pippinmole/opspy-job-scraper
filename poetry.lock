@@ -77,6 +77,16 @@ files = [
 ]
 
 [[package]]
+name = "cfkv"
+version = "1.1.2"
+description = "A Python wrapper for the Cloudflare KV Store API"
+optional = false
+python-versions = "*"
+files = [
+    {file = "cfkv-1.1.2.tar.gz", hash = "sha256:bc53f40c0b74aaebf07a07ed49ea467477bfc772c92dabc794a159be71731e0a"},
+]
+
+[[package]]
 name = "charset-normalizer"
 version = "3.3.2"
 description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
@@ -656,4 +666,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "88eb3cf9713a1b168bf49a7d3766bbef752ff4762cf69d613a2af0542f97c359"
+content-hash = "ab8f5c09e482af2201eb8808ad5196d45dc0db905fbedc7a454a858511a1a15e"

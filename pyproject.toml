@@ -11,6 +11,7 @@ python-jobspy-mini = "^1.1.53"
 prisma = "^0.13.1"
 asyncio = "^3.4.3"
 python-dotenv = "^1.0.1"
+cfkv = "^1.1.2"
 
 
 [build-system]
