@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "opspy-job-scraper"
+version = "0.1.0"
+description = ""
+authors = ["pippin_mole <40035529+pippinmole@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-jobspy-mini = "^1.1.53"
+prisma = "^0.13.1"
+asyncio = "^3.4.3"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
