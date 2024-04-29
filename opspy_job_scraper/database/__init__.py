@@ -5,6 +5,7 @@ from urllib.parse import urlparse, parse_qs
 from prisma import Prisma
 from jobspy import JobPost
 
+from opspy_job_scraper import logger
 from opspy_job_scraper.prisma.enums import JobType, JobStatus
 
 
@@ -19,7 +20,7 @@ async def create_companies(jobs: list[JobPost]) -> None:
     # write your queries here
     for row in jobs:
         company_id = str(row.company_name).lower().replace(" ", "-")
-        print("Creating company: ", row.company_name, "with id", company_id)
+        logger.info("Creating company: %s with id %s", row.company_name, company_id)
 
         await db.company.upsert(
             where={
@@ -125,6 +126,6 @@ async def insert_jobs(jobs: list[JobPost]) -> None:
         skip_duplicates=True
     )
 
-    print("Added jobs: " + str(added))
+    logger.info("Added jobs: %s", str(added))
 
     await db.disconnect()

@@ -1,6 +1,8 @@
 from jobspy import scrape_jobs, JobPost, DescriptionFormat
 from dotenv import load_dotenv
 
+from opspy_job_scraper import logger
+
 load_dotenv()
 
 sites = "indeed"
@@ -23,7 +25,7 @@ def run_scrape_jobs(location: str, country: str, fallback_currency: str, keyword
 
         return True
 
-    print(f"Searching for {results_wanted} {keyword} jobs in {location}")
+    logger.info("Searching for %d %s jobs in %s", results_wanted, keyword, location)
 
     jobs = scrape_jobs(
         site_name="indeed",
@@ -40,6 +42,6 @@ def run_scrape_jobs(location: str, country: str, fallback_currency: str, keyword
     for job in jobs:
         job.compensation.currency = job.compensation.currency if job.compensation.currency else fallback_currency
 
-    print(f"Found {len(jobs)} jobs")
+    logger.info("Found %d jobs", len(jobs))
 
     return jobs
