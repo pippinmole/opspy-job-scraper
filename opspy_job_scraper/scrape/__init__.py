@@ -27,9 +27,11 @@ def run_scrape_jobs(location: str, country: str, fallback_currency: str, keyword
 
     jobs = scrape_jobs(
         site_name="indeed",
-        search_term="software engineer",
+        search_term=keyword,
         country_indeed=country,
-        description_format=DescriptionFormat.MARKDOWN
+        location=location,
+        description_format=DescriptionFormat.MARKDOWN,
+        results_wanted=results_wanted,
     )
 
     # Filter bad rows

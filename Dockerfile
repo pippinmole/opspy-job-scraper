@@ -25,6 +25,10 @@ RUN poetry run prisma generate --schema=./opspy_job_scraper/schema.prisma
 
 # Define environment variable
 ENV DATABASE_URL ""
+ENV RESULTS_WANTED 25
+ENV NAMESPACE_ID ""
+ENV ACCOUNT_ID ""
+ENV API_KEY ""
 
 # Run app.py when the container launches
 # CMD ["python", "opspy_job_scraper/__init__.py"]

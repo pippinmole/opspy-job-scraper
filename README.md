@@ -58,7 +58,6 @@ This project is designed to run in Docker, so install Docker [here](https://docs
 2. Run the image:
     ```
     docker run -d \
-      -v "$(pwd)/state.json:/app/state.json" \
       -e DATABASE_URL='postgres://user:password@host:port/database_name' \
       -e NAMESPACE_ID='...' \
       -e ACCOUNT_ID='...' \
