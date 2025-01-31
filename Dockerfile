@@ -15,7 +15,7 @@ RUN pip install poetry
 
 # Install project dependencies
 RUN poetry config virtualenvs.create false \
-    && poetry install --no-dev
+    && poetry install
 
 # Fixes: https://github.com/RobertCraigie/prisma-client-py/issues/835
 RUN PRISMA_BINARY_CACHE_DIR=/.binaries prisma generate
